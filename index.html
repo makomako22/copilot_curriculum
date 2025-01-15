@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シンプルタスクマネージャー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>こんにちは世界！</h1>
+  <p>タスクを追加して完了したタスクと未完了のタスクを管理しましょう。</p>
+
+  <form action="/submit-task" method="post">
+    <label for="task">タスク:</label>
+    <input type="text" id="task" name="task" required>
+    <button type="submit">追加</button>
+  </form>
+
+  <div>
+    <button onclick="filterTasks('all')">すべてのタスク</button>
+    <button onclick="filterTasks('completed')">完了タスク</button>
+    <button onclick="filterTasks('incomplete')">未完了タスク</button>
+  </div>
+
+  <ul id="task-list">
+    <!-- タスクがここに表示されます -->
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
